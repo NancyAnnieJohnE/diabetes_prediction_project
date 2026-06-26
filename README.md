@@ -2,9 +2,9 @@
 
 ## Overview
 
-This project demonstrates how Machine Learning can be used to predict whether a person is likely to have diabetes based on various medical attributes. The project uses the **Logistic Regression** algorithm to classify patients as diabetic or non-diabetic.
+This project demonstrates how Machine Learning can be used to predict whether a person is likely to have diabetes based on various medical attributes. The project uses the **Logistic Regression** algorithm to classify patients as **Diabetic** or **Non-Diabetic**.
 
-The model is trained on a diabetes dataset, evaluated for its performance, and then used to predict diabetes status based on user-provided input values.
+The model is trained on a diabetes dataset, evaluated using performance metrics, and then used to predict diabetes status based on user-provided health information.
 
 ---
 
@@ -15,9 +15,10 @@ The model is trained on a diabetes dataset, evaluated for its performance, and t
 - Splits the dataset into training and testing sets.
 - Trains a **Logistic Regression** classification model.
 - Evaluates the model using accuracy score.
+- Displays a confusion matrix for model evaluation.
 - Saves the trained model using Joblib.
-- Loads the saved model for prediction.
-- Accepts user input from the terminal.
+- Loads the saved model for future predictions.
+- Accepts user input through the terminal.
 - Predicts whether a person is diabetic or non-diabetic.
 
 ---
@@ -26,13 +27,13 @@ The model is trained on a diabetes dataset, evaluated for its performance, and t
 
 **Algorithm Used:** Logistic Regression
 
-Logistic Regression is a supervised machine learning algorithm used for binary classification problems. In this project, it predicts whether a person has diabetes based on several medical measurements.
+Logistic Regression is a supervised machine learning algorithm used for binary classification problems. It estimates the probability that an input belongs to one of two classes. In this project, it predicts whether a person has diabetes based on several medical measurements.
 
 ---
 
 ## Dataset
 
-The dataset contains medical records of patients.
+The dataset contains medical information collected from patients.
 
 ### Input Features
 
@@ -59,6 +60,7 @@ The dataset contains medical records of patients.
 - NumPy
 - Pandas
 - Scikit-learn
+- Matplotlib
 - Joblib
 - Anaconda Prompt
 
@@ -72,25 +74,26 @@ The dataset contains medical records of patients.
 4. Split the dataset into training and testing sets.
 5. Train the **Logistic Regression** model.
 6. Evaluate the model using accuracy score.
-7. Save the trained model.
-8. Load the saved model.
-9. Accept medical details from the user.
-10. Predict whether the person is diabetic or non-diabetic.
+7. Generate the confusion matrix.
+8. Save the trained model.
+9. Load the saved model.
+10. Accept medical details from the user.
+11. Predict whether the patient is diabetic or non-diabetic.
 
 ---
 
 ## Project Structure
 
-```
+```text
 diabetes_prediction_project/
 │
 ├── diabetes.csv
 ├── diabetes_model.py
 ├── predict_diabetes.py
 ├── diabetes_model.pkl
-├── accuracy.png
-├── prediction.png
-├── README.md
+├── accuracy_graph.png
+├── confusion_matrix.png
+└── README.md
 ```
 
 ---
@@ -103,7 +106,7 @@ Open **Anaconda Prompt**.
 
 ### Step 2
 
-Navigate to the project folder.
+Navigate to the project directory.
 
 ```bash
 cd path_to_project_folder
@@ -127,11 +130,11 @@ python predict_diabetes.py
 
 ### Step 5
 
-Enter the required medical details.
+Enter the required medical details when prompted.
 
 Example:
 
-```
+```text
 Pregnancies: 2
 Glucose: 120
 Blood Pressure: 70
@@ -144,13 +147,13 @@ Age: 35
 
 Example Output:
 
-```
+```text
 Prediction: Non-Diabetic
 ```
 
 or
 
-```
+```text
 Prediction: Diabetic
 ```
 
@@ -160,15 +163,15 @@ Prediction: Diabetic
 
 ### Model Accuracy
 
-> Replace the filename below with your actual accuracy screenshot name if it is different.
+The following screenshot shows the accuracy obtained by the Logistic Regression model.
 
-![Model Accuracy](accuracy.png)
+![Model Accuracy](accuracy_graph.png)
 
-### Prediction Result
+### Confusion Matrix
 
-> Replace the filename below with your actual prediction screenshot name if it is different.
+The confusion matrix below illustrates the model's classification performance by comparing actual and predicted outcomes.
 
-![Prediction Result](prediction.png)
+![Confusion Matrix](confusion_matrix.png)
 
 ---
 
@@ -181,6 +184,7 @@ Required Python libraries:
 - numpy
 - pandas
 - scikit-learn
+- matplotlib
 - joblib
 
 ---
@@ -189,7 +193,8 @@ Required Python libraries:
 
 - Early diabetes risk prediction
 - Healthcare decision support systems
-- Medical data analysis
+- Medical diagnosis assistance
+- Clinical data analysis
 - Machine learning classification projects
 - Educational purposes
 
@@ -201,10 +206,11 @@ Required Python libraries:
 - Improve prediction accuracy through feature engineering.
 - Compare Logistic Regression with other classification algorithms.
 - Develop a graphical user interface (GUI).
-- Implement real-time prediction through a web application.
+- Build a web application for online predictions.
+- Integrate real-time patient data for prediction.
 
 ---
 
 ## Conclusion
 
-This project demonstrates the implementation of the **Logistic Regression** algorithm for diabetes prediction using patient medical data. It provides a practical example of supervised machine learning for binary classification and serves as a strong foundation for healthcare-related machine learning applications.
+This project demonstrates the implementation of the **Logistic Regression** algorithm for diabetes prediction using patient medical data. It follows a complete machine learning workflow, including data preprocessing, model training, evaluation, and prediction. The project serves as a practical example of applying supervised machine learning techniques to solve a real-world healthcare classification problem.
